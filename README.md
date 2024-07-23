@@ -16,7 +16,7 @@ The gateway server implements CCIP Read (EIP 3668), and answers requests by look
 
 ## [Contracts](packages/contracts)
 
-The smart contract provides a resolver stub that implement CCIP Read (EIP 3668) and ENS wildcard resolution (ENSIP 10). When queried for a name, it directs the client to query the gateway server. When called back with the gateway server response, the resolver verifies the signature was produced by an authorised signer, and returns the response to the client.
+The smart contract provides a resolver stub that implements CCIP Read (EIP 3668) and ENS wildcard resolution (ENSIP 10). When queried for a name, it directs the client to query the gateway server. When called back with the gateway server response, the resolver verifies the signature was produced by an authorised signer, and returns the response to the client.
 
 ## Trying it Out (Local)
 
@@ -45,7 +45,7 @@ Then, in a new terminal, build and run a test node with an ENS registry and the 
 # If local gateway will be used for testing
 yarn start:node
 
-# If deployed app will be used as gateway set the environment variable for the contracts to use
+# If deployed app will be used as a gateway set the environment variable for the contracts to use
 export REMOTE_GATEWAY=https://{{app-sub-domain}}.herokuapp.com
 yarn start:node
 ```
@@ -116,7 +116,7 @@ Check these addresses against the chosen gateway test db json file and you will 
 
 ## Testing in the Wild
 
-Once all the parts are deployed and the resolver contract is associated to the ENS profile, your [ENS Domain](https://app.ens.domains/) should be able to resolve with your address.
+Once all the parts are deployed and the resolver contract is associated with the ENS profile, your [ENS Domain](https://app.ens.domains/) should be able to resolve with your address.
 
 ### Manual Testing
 

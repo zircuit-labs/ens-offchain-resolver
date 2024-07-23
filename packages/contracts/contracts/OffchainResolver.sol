@@ -80,7 +80,7 @@ contract OffchainResolver is IExtendedResolver, SupportsInterface, Ownable {
      */
     function resolveWithProof(bytes calldata response, bytes calldata extraData) external view returns (bytes memory) {
         (address signer, bytes memory result) = SignatureVerifier.verify(extraData, response);
-        require(signers[signer], "SignatureVerifier: Invalid sigature");
+        require(signers[signer], "SignatureVerifier: Invalid signature");
         return result;
     }
 

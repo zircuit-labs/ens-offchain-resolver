@@ -51,7 +51,7 @@ const main = async () => {
       const fetchResponse = await fetch(url)
       result = await fetchResponse.json()
 
-      // If we didn't get a real response back from the gateway, we should try the other urls in the list
+      // If we don't get a real response back from the gateway, we should try the other urls in the list
       successfulGatewayCall = !!result
     } catch (e) {
       console.log(e)
